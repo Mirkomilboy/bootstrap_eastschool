@@ -1,0 +1,684 @@
+/* =============== general =============== */
+:root {
+    --bg-color: #f7fbff;
+    --box-shadow:0px 0px 10px 5px rgba(12,18,60,0.04);
+    --primary-color: #0275d8;
+
+    scroll-behavior: smooth;
+}
+
+.content-heading .first-p {
+    width: 120px;
+    text-align: center;
+    margin: auto;
+    color: var(--primary-color);
+    padding: 5px 20px;
+    border-radius: 20px;
+    background-color: #e0f0ff;
+    font-weight: bold;
+}
+
+.content-heading h2 {
+    text-align: center;
+    margin: auto;
+    font-weight: 700;
+}
+
+.content-heading h2 > span {
+    color: var(--primary-color);
+}
+
+.content-heading .second-p {
+    width: 60%;
+    margin: auto;
+    text-align: center;
+    font-weight: 500;
+}
+
+/* =============== header =============== */
+.header a,
+.header p {
+    color: #fff;
+    font-size: 14px;
+}
+
+.header .social-header i {
+    cursor: pointer;
+    opacity: .8;
+    transition: opacity .3s ease;
+}
+
+.header .social-header i:hover {
+    opacity: 1;
+}
+
+/* =============== navigation =============== */
+.navbar_fixed {
+    position: fixed;
+    width: 100%;
+    top: -1px;
+    left: 0;
+    right: 0;
+    background: #fff;
+    box-shadow: var(--box-shadow);
+    z-index: 999;
+    transition: background 1s ease;
+}
+
+.navbar .navbar-brand {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.navbar .navbar-nav .nav-item .nav-link {
+    color: #000;
+    font-size: 17px;
+}
+
+/* navigation hover */
+.navbar .navbar-nav .nav-item,
+.navbar .navbar-nav .nav-item:after,
+.navbar .navbar-nav .nav-item:before,
+.navbar .navbar-nav .nav-item a {
+  transition: all .5s;
+}
+
+.navbar .navbar-nav .active .nav-link,
+.navbar .navbar-nav .nav-item a:hover {
+  color: var(--primary-color);
+}
+
+ul.stroke li {
+  position: relative;
+}
+
+ul.stroke li:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '.';
+  color: transparent;
+  background: var(--primary-color);
+  height: 3px;
+}
+
+.navbar .navbar-nav .active .nav-link:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 100%;
+  content: '.';
+  color: transparent;
+  background: var(--primary-color);
+  height: 3px;
+}
+
+ul.stroke li:hover:after {
+  width: 100%;
+}
+
+/* dropdown */
+.dropdown-toggle::after {
+     transition: transform 0.15s linear;
+}
+
+.show.dropdown .dropdown-toggle::after {
+    transform: translateY(3px);
+}
+
+/* =============== hero section =============== */
+.hero {
+    position: relative;
+}
+
+.hero .hero-content {
+    height: 75vh;
+}
+
+.hero-content-child {
+    position: relative;
+    z-index: 9;
+}
+
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.4;
+}
+
+.hero-content-child h1 {
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.hero-content-child h1>span {
+    color: var(--primary-color);
+}
+
+.hero-links a {
+    text-decoration: none;
+    color: #000;
+    transition: color .3s ease;
+}
+
+.hero-links a:hover {
+    color: var(--primary-color);
+}
+
+.hero-links a span {
+    font-size: 18px;
+}
+
+/* =============== hero card section =============== */
+.hero-cards .card {
+    border: none;
+    border-radius: 8px;
+    box-shadow: var(--box-shadow);
+}
+
+/* card hover */
+.hero-cards .card-body {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-cards .card-body::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-radius: 8px;
+    width: 100%;
+    height: 100%;
+    transform: scaleY(0);
+    transform-origin: bottom center;
+    background: var(--primary-color);
+    z-index: -1;
+    transition: transform 0.3s;
+}
+
+.hero-cards .card-body:hover::after {
+    transform: scaleY(1);
+}
+
+.hero-cards .card-body:hover .card-title,
+.hero-cards .card-body:hover .card-subtitle,
+.hero-cards .card-body:hover .card-text {
+    color: #fff !important;
+}
+
+/* =============== about section =============== */
+#about {
+    padding-top: 100px;
+    background-color: var(--bg-color);
+}
+
+#about .about-heading .about-sub-content .fas {
+    padding: 20px 19px;
+    color: var(--primary-color);
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: var(--box-shadow);
+    margin-right: 15px;
+    margin-bottom: 10px;
+}
+
+/* =============== skills section =============== */
+.skills .skills-text {
+    height: 20px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.skills .progress {
+    height: 10px;
+    border-radius: 0;
+}
+
+/* =============== counts section =============== */
+.counts .count-card {
+    text-align: center;
+    background-color: var(--bg-color);
+    position: relative;
+}
+
+.counts .count-card i {
+    position: absolute;
+    top: -30px;
+    left: 40%;
+    padding: 10px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    border: 5px solid #fff;
+    color: #fff;
+}
+
+.counts .count-card i.fa-clipboard {
+    padding: 10px 14px;
+}
+
+.counts .count-card i.fa-user-friends {
+    padding: 10px 7px;
+}
+
+.counts .count-card h1 {
+    padding-top: 30px;
+}
+
+/* =============== client brands section =============== */
+.client-brands {
+    background-color: var(--bg-color);
+}
+
+.client-brands .img {
+    text-align: center;
+    margin: auto;
+}
+
+.client-brands img {
+    width: 50%;
+    padding: 25px 0;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+}
+
+.client-brands img:hover {
+    transform: scale(1.1);
+}
+
+/* =============== services section =============== */
+.services {
+    padding-top: 100px;
+}
+
+.services .card {
+    border: 1px solid #c8e5ff;
+    border-radius: 0;
+}
+
+.services .card .card-body .card-title {
+    border: 1px solid #c8e5ff;
+    border-radius: 4px;
+    padding: 20px;
+    background-color: var(--bg-color);
+    width: 65px;
+    height: 65px;
+    margin: 50px auto 10px;
+}
+
+.services .card {
+    transition: box-shadow 0.5s ease;
+}
+
+.services .card:hover {
+    box-shadow: var(--box-shadow);
+}
+
+.services .card .card-body .card-title {
+    transition: border-color 0.5s ease;
+}
+
+.services .card:hover .card-body .card-title {
+    border-color: var(--primary-color);
+}
+
+.services .card .card-subtitle {
+    transition: color   0.5s ease;
+}
+
+.services .card:hover .card-subtitle {
+    color: var(--primary-color);
+}
+
+/* =============== testimonial section =============== */
+.testimonial .carousel {
+    padding: 100px 0;
+    position: relative;
+    z-index: 1;
+}
+
+.testimonial .carousel .item img {
+    width: 100px;
+    border: 8px solid rgba(172, 172, 172, 0.3);
+    border-radius: 50%;
+    margin: auto;
+}
+
+.testimonial .carousel .item .quote {
+    margin: auto;
+}
+
+.testimonial .testimonial-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(30%);
+}
+
+/* =============== portfolio section =============== */
+#portfolio {
+    padding-top: 100px;
+}
+
+#portfolio .button-group button {
+    background: transparent;
+    border: none;
+    font-weight: 500;
+}
+
+#portfolio .button-group button + button {
+    padding-left: 20px;
+}
+
+#portfolio .grid .our-project {
+    position: relative;
+}
+
+#portfolio .grid .our-project .img {
+    z-index: -1;
+}
+
+#portfolio .grid .our-project .title {
+    position: absolute;
+    bottom: 20px;
+    background: rgba(255, 255, 255, 0.7);
+    width: 90%;
+    margin-left: 5%;
+    padding-left: 20px;
+    z-index: 1;
+    visibility: hidden;
+    opacity: 0;
+    transition: transform 0.5s, opacity 0.5s linear;
+}
+
+#portfolio .grid .our-project:hover .title {
+    visibility: visible;
+    opacity: 1;
+    transform: scaleY(20px);
+}
+
+/* =============== team section =============== */
+#team {
+    padding-top: 100px;
+    background-color: var(--bg-color);
+}
+
+#team .card {
+    border: 0;
+    border-radius: 8px;
+    box-shadow: var(--box-shadow);
+}
+
+#team .card .team-img-box {
+    position: relative;
+}
+
+#team .card .team-img-box .img-team {
+    z-index: -1;
+}
+
+#team .card .social-icons {
+    position: absolute;
+    z-index: 1;
+    bottom: 15px;
+    left: 50%;
+    visibility: hidden;
+    opacity: 0;
+    transition: transform 0.5s, opacity 0.5s linear;
+}
+
+#team .card .social-icons div {
+    position: relative;
+    left: -50%;
+}
+
+#team .card .social-icons i {
+    color: #fff;
+    padding: 15px 10px;
+    background-color: rgba(2, 117, 216, 0.7);
+}
+
+#team .card:hover .social-icons {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* =============== pricing section =============== */
+.pricing .card {
+    border: 0;
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+}
+
+.pricing .card-header {
+    border-bottom: 0;
+}
+.pricing .card-footer {
+    border-top: 0;
+}
+
+.pricing .card .price .currency {
+    font-size: 25px;
+    color: var(--primary-color);
+    font-weight: 700;
+    line-height: 1;
+}
+.pricing .card .price .amount {
+    font-size: 45px;
+    color: var(--primary-color);
+    font-weight: 700;
+    line-height: .8;
+}
+
+.pricing .card .price .text-muted {
+    line-height: 3.5;
+}
+
+.pricing .card .ultimate {
+    position: relative;
+}
+
+.pricing .card .ultimate .advanced {
+    position: absolute;
+    z-index: 1;
+    padding: 0 30px;
+    top: 26px;
+    right: -29px;
+    transform: rotate(45deg);
+}
+
+.pricing .card .ultimate .card-content {
+    z-index: -1;
+}
+
+/* =============== faq section =============== */
+.faq {
+    background-color: var(--bg-color);
+}
+
+.accordion-box {
+    max-width: 70%;
+    margin: auto;
+}
+
+.accordion {
+    background: none;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 18px;
+    transition: 0.5s;
+  }
+
+  .active-accordion, .accordion:hover {
+    color: var(--primary-color);
+  }
+
+  .accordion:after {
+    content: '\02C5';
+    font-weight: bold;
+    float: left;
+    margin-right: 10px;
+  }
+
+  .active-accordion:after {
+    content: "\02C4";
+  }
+
+  .panel {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    border-bottom: 1px solid #c2e3ff;
+  }
+
+/* =============== contact section =============== */
+#contact {
+    padding-top: 100px;
+}
+
+#contact .contact-box {
+    box-shadow: var(--box-shadow);
+}
+
+#contact .contact-box i {
+    padding: 12px 16px;
+    border: 1px dashed var(--primary-color);
+    border-radius: 50%;
+}
+
+#contact .contact-box i.fa-envelope {
+    padding: 12px 14px;
+}
+
+#map {
+    height: 400px;
+    width: 100%;
+    box-shadow: var(--box-shadow);
+}
+
+#contact form {
+    box-shadow: var(--box-shadow);
+}
+
+/* =============== newsletter section =============== */
+.newsletter {
+    background-color: var(--bg-color);
+}
+
+.newsletter .input-group {
+    width: 50%;
+}
+
+.newsletter .input-group input {
+    border: 0;
+    box-shadow: var(--box-shadow);
+}
+
+/* =============== footer section =============== */
+.footer p,
+.footer a {
+    font-size: 15px;
+}
+
+.footer .footer-social a {
+    color: #fff;
+    background-color: var(--primary-color);
+    margin: 6px;
+    border-radius: 5px;
+}
+
+.footer .footer-social a {
+    opacity: 1;
+    transition: opacity .3s ease;
+}
+
+.footer .footer-social a:hover {
+    opacity: 0.7;
+}
+
+/* =============== bottom section =============== */
+.bottom-section {
+    background-color: var(--bg-color);
+}
+
+.bottom-section p {
+    font-size: 14px;
+}
+
+/* =============== back to top link =============== */
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: var(--primary-color);
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+    transition: background 0.4s ease;
+  }
+
+  #myBtn:hover {
+    background: #39a3ff;
+  }
+
+/* =============== media =============== */
+@media(min-width: 1200px) {
+    .container {
+        max-width: 1350px !important;
+    }
+}
+
+@media(max-width: 992px) {
+
+}
+
+@media(max-width: 768px) {
+    .header .social-header {
+        display: none;
+    }
+
+    .newsletter .input-group {
+        width: 75%;
+    }
+}
+
+@media(max-width: 576px) {
+    .hero-content-child h1 {
+        font-size: 36px;
+    }
+
+    .content-heading h2 {
+        font-size: 28px;
+    }
+
+    .content-heading .second-p {
+        width: 90%;
+    }
+
+    .newsletter .input-group {
+        width: 90%;
+    }
+}
